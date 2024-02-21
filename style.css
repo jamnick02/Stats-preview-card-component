@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  position: relative;
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1060px;
+  height: auto;
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.left {
+  padding: 7%;
+  flex: 1;
+}
+
+.title {
+  color: hsl(0, 0%, 100%);
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.title .insights {
+  color: hsl(277, 64%, 61%);
+}
+.desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 2em;
+}
+.summary {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.total {
+  color: hsl(0, 0%, 100%);
+}
+
+.data p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.hero {
+  flex: 1;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsla(277, 64%, 61%, 45%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    height: 1000px;
+  }
+  .container {
+    max-width: 375px;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .left {
+    order: 2;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+  .left .summary {
+    flex-direction: column;
+  }
+  .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
